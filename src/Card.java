@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     public static final int SPADES  = 0;
     public static final int DIAMONDS  = 1;
@@ -70,5 +70,13 @@ public class Card {
 
         return toPrint;
 
+    }
+
+    @Override
+    public int compareTo(Card card) {
+        if (this.value == card.value){
+            return this.suit - card.suit;
+        }
+        return card.value - this.value;
     }
 }

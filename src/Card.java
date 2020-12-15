@@ -16,6 +16,14 @@ public class Card implements Comparable<Card> {
         this.suit = suit;
     }
 
+    public int getValue(){
+        return value;
+    }
+
+    public void setValue(int value){
+        this.value = value;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -77,6 +85,6 @@ public class Card implements Comparable<Card> {
         if (this.value == card.value){
             return this.suit - card.suit;
         }
-        return card.value - this.value;
+        return this.value - card.value;
     }
 }

@@ -24,6 +24,10 @@ public class Card implements Comparable<Card> {
         this.value = value;
     }
 
+    public int getSuit() {
+        return suit;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

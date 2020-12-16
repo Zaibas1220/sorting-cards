@@ -35,4 +35,9 @@ public class Hand implements Comparable<Hand>{
     public int compareTo(Hand hand) {
         return this.overallValue() - hand.overallValue();
     }
+
+    public void sortAgainstSuit (){
+        SortAgainstSuitAndValue suitSorter = new SortAgainstSuitAndValue();
+        Collections.sort(hand, suitSorter );
+    }
 }
